@@ -35,7 +35,7 @@ Room.find({}).removeAsync()
 Thing.find({}).removeAsync()
   .then(() => {
     Thing.create({
-      name: 'Development Tools',
+      name: 'Test',
       info: 'Integration with popular tools such as Bower, Grunt, Babel, Karma, ' +
              'Mocha, JSHint, Node Inspector, Livereload, Protractor, Jade, ' +
              'Stylus, Sass, and Less.'
