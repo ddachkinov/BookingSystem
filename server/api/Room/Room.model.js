@@ -7,6 +7,8 @@ var RoomSchema = new mongoose.Schema({
   Rented: Boolean,
   Double: Boolean,
   ExtraBed: Boolean,
+  RoomType : Boolean,
+  RoomPrice : Number,
   Animal: Boolean,
   ArrivalDate: Date,
   DepatureDate: Date,
