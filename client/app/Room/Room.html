@@ -1,0 +1,12 @@
+<div>Oversigt over værelser</div>
+<div ng-repeat="isRoom in Rooms">
+<div>Room Number: {{isRoom.RoomNumber}} </div>
+<div>Rented: {{isRoom.Rented}}</div>
+
+<button ng-click="deleteRoom(isRoom)">Delete</button>
+
+
+<input ng-model="isRoom.RoomNumber">
+<button ng-click="UpdateRoomNumber(isRoom)">Update  </button>
+
+</div>
