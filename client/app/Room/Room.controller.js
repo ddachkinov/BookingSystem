@@ -2,7 +2,7 @@
 
 angular.module('bookingSystemApp')
   .controller('RoomCtrl', function($scope, RoomService) {
-    $scope.message = 'Hello';
+    $scope.message = 'Hello1';
 
     RoomService.query(function(RoomQuery) {
       $scope.Rooms = RoomQuery;
