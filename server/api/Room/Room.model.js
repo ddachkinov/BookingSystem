@@ -17,9 +17,11 @@ var RoomSchema = new mongoose.Schema({
     PhoneNumber: String,
     Keybox: Boolean,
     Notes: String,
+    CustomerEmail: String,
     Company: {
       Name: String,
-      PhoneNumber: String
+      PhoneNumber: String,
+      CompanyEmail: String
     }
   }
 });
