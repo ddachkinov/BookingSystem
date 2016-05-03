@@ -13,14 +13,14 @@ var RoomSchema = new mongoose.Schema({
   ArrivalDate: Date,
   DepatureDate: Date,
   Customer: {
-    Name: String,
-    PhoneNumber: String,
+    CustomerName: String,
+    CustomerPhoneNumber: String,
     Keybox: Boolean,
     Notes: String,
     CustomerEmail: String,
     Company: {
-      Name: String,
-      PhoneNumber: String,
+      CompanyName: String,
+      CompanyPhoneNumber: String,
       CompanyEmail: String
     }
   }
