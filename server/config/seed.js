@@ -10,349 +10,361 @@ import Room from '../api/Room/Room.model';
 Room.find({}).removeAsync()
   .then(() => {
       Room.create({
-      RoomNumber: 1,
+        RoomNumber: 1,
+        Rented: false,
+        Double: false,
+        BathRoom : false,
+        RoomPrice : 650,
+        Booking:{
+          ExtraBed: false,
+          Animal: false,
+          ArrivalDate: new Date(),
+          DepatureDate: new Date(),
+          Customer: {
+            Name: " ",
+            PhoneNumber: " ",
+            Keybox: false,
+            Notes: " ",
+            CustomerEmail: " ",
+            Company: {
+              Name: " ",
+              PhoneNumber: " ",
+              CompanyEmail: " "
+            }
+          }
+    })
+    Room.create({
+      RoomNumber: 2,
       Rented: false,
       Double: false,
-      ExtraBed: false,
       BathRoom : false,
       RoomPrice : 650,
+      Booking:{
+        ExtraBed: false,
+        Animal: false,
+        ArrivalDate: new Date(),
+        DepatureDate: new Date(),
+        Customer: {
+          Name: " ",
+          PhoneNumber: " ",
+          Keybox: false,
+          Notes: " ",
+          CustomerEmail: " ",
+          Company: {
+            Name: " ",
+            PhoneNumber: " ",
+            CompanyEmail: " "
+          }
+        }
+  })
+  Room.create({
+    RoomNumber: 4,
+    Rented: false,
+    Double: false,
+    BathRoom : false,
+    RoomPrice : 650,
+    Booking:{
+      ExtraBed: false,
       Animal: false,
       ArrivalDate: new Date(),
       DepatureDate: new Date(),
       Customer: {
-        CustomerName: ' ',
-        CustomerPhoneNumber: ' ',
+        Name: " ",
+        PhoneNumber: " ",
         Keybox: false,
-        Notes: ' ',
-        CustomerEmail: ' ',
+        Notes: " ",
+        CustomerEmail: " ",
         Company: {
-          CompanyName: ' ',
-          CompanyPhoneNumber: ' ',
-          CompanyEmail: ' '
+          Name: " ",
+          PhoneNumber: " ",
+          CompanyEmail: " "
         }
       }
-    })
-    Room.create({
-    RoomNumber: 2,
-    Rented: false,
-    Double: false,
+})
+Room.create({
+  RoomNumber: 5,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
     ExtraBed: false,
-    BathRoom : false,
-    RoomPrice : 650,
     Animal: false,
     ArrivalDate: new Date(),
     DepatureDate: new Date(),
     Customer: {
-      CustomerName: ' ',
-      CustomerPhoneNumber: ' ',
+      Name: " ",
+      PhoneNumber: " ",
       Keybox: false,
-      Notes: ' ',
-      CustomerEmail: ' ',
+      Notes: " ",
+      CustomerEmail: " ",
       Company: {
-        CompanyName: ' ',
-        CompanyPhoneNumber: ' ',
-        CompanyEmail: ' '
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
       }
     }
-  })
-  Room.create({
-  RoomNumber: 4,
+})
+Room.create({
+  RoomNumber: 6,
   Rented: false,
   Double: false,
-  ExtraBed: false,
   BathRoom : false,
   RoomPrice : 650,
-  Animal: false,
-  ArrivalDate: new Date(),
-  DepatureDate: new Date(),
-  Customer: {
-    CustomerName: ' ',
-    CustomerPhoneNumber: ' ',
-    Keybox: false,
-    Notes: ' ',
-    CustomerEmail: ' ',
-    Company: {
-      CompanyName: ' ',
-      CompanyPhoneNumber: ' ',
-      CompanyEmail: ' '
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
     }
-  }
 })
 Room.create({
-RoomNumber: 5,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : false,
-RoomPrice : 650,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 7,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 6,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : false,
-RoomPrice : 650,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 8,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }})
+Room.create({
+  RoomNumber: 10,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 7,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : false,
-RoomPrice : 650,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 11,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 8,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : false,
-RoomPrice : 650,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 12,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 10,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 13,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }})
+Room.create({
+  RoomNumber: 14,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }})
+Room.create({
+  RoomNumber: 15,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 11,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 16,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
 Room.create({
-RoomNumber: 12,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
-})
-Room.create({
-RoomNumber: 13,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
-})
-Room.create({
-RoomNumber: 14,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
-})
-Room.create({
-RoomNumber: 15,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
-})
-Room.create({
-RoomNumber: 16,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
-})
-Room.create({
-RoomNumber: 17,
-Rented: false,
-Double: false,
-ExtraBed: false,
-BathRoom : true,
-RoomPrice : 850,
-Animal: false,
-ArrivalDate: new Date(),
-DepatureDate: new Date(),
-Customer: {
-  CustomerName: ' ',
-  CustomerPhoneNumber: ' ',
-  Keybox: false,
-  Notes: ' ',
-  CustomerEmail: ' ',
-  Company: {
-    CompanyName: ' ',
-    CompanyPhoneNumber: ' ',
-    CompanyEmail: ' '
-  }
-}
+  RoomNumber: 17,
+  Rented: false,
+  Double: false,
+  BathRoom : false,
+  RoomPrice : 650,
+  Booking:{
+    ExtraBed: false,
+    Animal: false,
+    ArrivalDate: new Date(),
+    DepatureDate: new Date(),
+    Customer: {
+      Name: " ",
+      PhoneNumber: " ",
+      Keybox: false,
+      Notes: " ",
+      CustomerEmail: " ",
+      Company: {
+        Name: " ",
+        PhoneNumber: " ",
+        CompanyEmail: " "
+      }
+    }
 })
   })
 
