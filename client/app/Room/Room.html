@@ -1,4 +1,43 @@
-<div>Oversigt over værelser</div>
+<div class = "BookedRooms">
+  <div ng-controller="RoomCtrl" ng-cloak>
+    <md-content>
+      <md-list>
+        <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
+            <md-list-item ng-repeat="isRoom in Rooms">
+              <md-button class="md-raised" >
+              <div>Værelse Nr: {{isRoom.RoomNumber}} </div>
+          </md-button>
+
+
+  </div>
+</div>
+
+<div class = "FreeRooms">
+  <div ng-controller="RoomCtrl" ng-cloak>
+    <md-content>
+      <md-list>
+        <md-subheader class="md-no-sticky">Oversigt over frie værelser</md-subheader>
+        <md-list-item class="md-1-line" ng-repeat="isRoom in Rooms">
+          <div>Værelse Nr: {{isRoom.RoomNumber}} </div>
+  </div>
+</div>
+
+
+<!-- <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <md-button class="md-raised">Button</md-button>
+    <md-button class="md-raised md-primary">Primary</md-button>
+    <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+    <md-button class="md-raised md-warn">Warn</md-button>
+    <div class="label">Raised</div>
+  </section> -->
+
+
+
+
+
+
+<!--Sådan det var til at starte med, vent med at slette til sidst!!!!!!!  -->
+<!-- <div>Oversigt over værelser</div>
 <div ng-repeat="isRoom in Rooms">
 <div>Room Number: {{isRoom.RoomNumber}} </div>
 <div>Rented: {{isRoom.Rented}}</div>
@@ -9,4 +48,4 @@
 <input ng-model="isRoom.RoomNumber">
 <button ng-click="UpdateRoomNumber(isRoom)">Update  </button>
 
-</div>
+</div> -->

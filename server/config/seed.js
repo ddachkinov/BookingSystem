@@ -32,6 +32,7 @@ Room.find({}).removeAsync()
               CompanyEmail: " "
             }
           }
+        }
     })
     Room.create({
       RoomNumber: 2,
@@ -56,6 +57,7 @@ Room.find({}).removeAsync()
             CompanyEmail: " "
           }
         }
+      }
   })
   Room.create({
     RoomNumber: 4,
@@ -80,6 +82,7 @@ Room.find({}).removeAsync()
           CompanyEmail: " "
         }
       }
+    }
 })
 Room.create({
   RoomNumber: 5,
@@ -104,6 +107,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 6,
@@ -128,6 +132,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 7,
@@ -152,6 +157,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 8,
@@ -175,7 +181,9 @@ Room.create({
         PhoneNumber: " ",
         CompanyEmail: " "
       }
-    }})
+    }
+    }
+  })
 Room.create({
   RoomNumber: 10,
   Rented: false,
@@ -199,6 +207,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 11,
@@ -223,6 +232,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 12,
@@ -247,6 +257,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 13,
@@ -270,7 +281,9 @@ Room.create({
         PhoneNumber: " ",
         CompanyEmail: " "
       }
-    }})
+    }
+  }
+})
 Room.create({
   RoomNumber: 14,
   Rented: false,
@@ -293,7 +306,9 @@ Room.create({
         PhoneNumber: " ",
         CompanyEmail: " "
       }
-    }})
+    }
+  }
+})
 Room.create({
   RoomNumber: 15,
   Rented: false,
@@ -317,6 +332,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 16,
@@ -341,6 +357,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
 Room.create({
   RoomNumber: 17,
@@ -365,6 +382,7 @@ Room.create({
         CompanyEmail: " "
       }
     }
+  }
 })
   })
 
