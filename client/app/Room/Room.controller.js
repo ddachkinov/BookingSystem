@@ -9,23 +9,28 @@ angular.module('bookingSystemApp')
 
     });
 
-   
+    $scope.goToBooking = function(room) {
+        $state.go('bookingdetails', {
+          id: room._id,
+
+  });
+};
 
 
 
-    $scope.deleteRoom = function(Room) {
-      console.log("SAdasdsad");
-      RoomService.delete({
-        id: Room._id
-      });
-    }
-
-    $scope.UpdateRoomNumber = function(Room) {
-      console.log("klik");
-      RoomService.update({
-        id: Room._id
-
-      }, Room);
-    }
+    // $scope.deleteRoom = function(Room) {
+    //   console.log("SAdasdsad");
+    //   RoomService.delete({
+    //     id: Room._id
+    //   });
+    // }
+    //
+    // $scope.UpdateRoomNumber = function(Room) {
+    //   console.log("klik");
+    //   RoomService.update({
+    //     id: Room._id
+    //
+    //   }, Room);
+    // }
 
   });

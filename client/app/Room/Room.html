@@ -3,12 +3,10 @@
     <md-content>
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
-            <md-list-item ng-repeat="isRoom in Rooms">
-              <md-button class="md-raised" >
+            <md-list-item ng-click="goToBooking(room)" ng-repeat="isRoom in Rooms">
+
               <div>Værelse Nr: {{isRoom.RoomNumber}} </div>
           </md-button>
-
-
   </div>
 </div>
 
