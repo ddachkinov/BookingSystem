@@ -3,9 +3,9 @@
     <md-content>
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
-            <md-list-item ng-click="goToBooking(room)" ng-repeat="isRoom in Rooms">
+            <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
 
-              <div>Værelse Nr: {{isRoom.RoomNumber}} </div>
+              <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
   </div>
 </div>

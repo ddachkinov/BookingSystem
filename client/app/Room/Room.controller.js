@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomCtrl', function($scope, RoomService) {
+  .controller('RoomCtrl', function($scope, $state, RoomService) {
     $scope.message = 'Hello12';
 
     RoomService.query(function(RoomQuery) {
@@ -10,11 +10,12 @@ angular.module('bookingSystemApp')
     });
 
     $scope.goToBooking = function(room) {
-        $state.go('bookingdetails', {
-          id: room._id,
+  
+      $state.go('bookingdetails', {
+        id: room._id,
 
-  });
-};
+      });
+    };
 
 
 

@@ -1,14 +1,15 @@
 'use strict';
 
-angular.module('BookingSystemApp')
-  .controller('RoomDetailsCtrl', function ($scope, $state)
-  {
+angular.module('bookingSystemApp')
+  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams) {
 
-    Room.get({name:$stateParams.name}, function(room) {
-    $scope.room = room;
-  });
+      RoomService.get({
+        id: $stateParams.id
+      }, function(room) {
+        $scope.room = room;
+        console.log(room);
+      });
 
-    $scope.goBack = function(){
-    window.history.back();
-  };
-  });
+      $scope.goBack = function() {
+        window.history.back();
+      };
