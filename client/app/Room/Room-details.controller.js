@@ -13,3 +13,4 @@ angular.module('bookingSystemApp')
       $scope.goBack = function() {
         window.history.back();
       };
+    });
