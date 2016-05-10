@@ -1,2 +1,93 @@
+<md-content flex-offset="5" flex="90">
+  <div flex-sm="100" flex-xs="100" layout="row">
+    <div flex="5">
+      <md-button class="md-fab md-mini md-primary" aria-label="Go Back" ng-click="goBack()">
+        <i class="fa fa-arrow-left"></i>
+      </md-button>
+    </div>
 
-<div> Hej </div>
+
+    <md-list-item class="md-3-line">
+      <div flex-sm="100" flex-xs="100" class="md-list-item-text" layout="column">
+        <h2>Værelse nr: {{room.RoomNumber}} </h2>
+
+        <div>
+          <md-switch ng-model="room.Rented" aria-label="Switch 2" ng-true-value="Udlejede" ng-false-value="Frit">
+            Udlejnings status: {{room.Rented}}
+          </md-switch>
+        </div>
+        <h4>Dobbelt værelse: {{ room.Double }}</h4>
+        <h4>Bad på værelset: {{ room.BathRoom }}</h4>
+        <h4>Værelses pris: {{ room.RoomPrice }}</h4>
+        <h1></h1>
+
+        <h3>Booking Detaljer</h3>
+        <h5></h5>
+        <div layout="column">
+          <md-checkbox ng-model="room.Booking.ExtraBed" aria-label="Checkbox 1">
+            <h4>Opredning: {{ room.Booking.ExtraBed }}</h4>
+          </md-checkbox>
+          <md-checkbox ng-model="room.Booking.Animal " aria-label="Checkbox 1">
+            <h4>Dyr: {{ room.Booking.Animal  }}</h4>
+          </md-checkbox>
+        </div>
+        <h5></h5>
+        <div>
+          <md-datepicker ng-model="room.Booking.ArrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
+          <md-datepicker ng-model="room.Booking.DepatureDate" md-placeholder="Afrejse dato"></md-datepicker>
+        </div>
+
+        <h1></h1>
+        <h3>Kunde Detaljer</h3>
+        <h5></h5>
+        <div layout="column">
+          <md-input-container>
+            <label> <i class="fa fa-user" aria-hidden="true"></i> Kundens navn</label>
+            <input ng-model=" room.Booking.Customer.CustomerName" type="text">
+          </md-input-container>
+          <md-input-container>
+            <label> <i class="fa fa-phone" aria-hidden="true"></i> Kundens telefon nr. </label>
+            <input ng-model="room.Booking.Customer.CustomerPhoneNumber" type="text">
+          </md-input-container>
+          <div layout = "row">
+            <h4> Nøgle i nøglebox: </h4>
+          <md-checkbox  ng-model="room.Booking.Customer.Keybox" aria-label="Checkbox 1">
+
+          </md-checkbox>
+        </div>
+          <md-input-container>
+            <label><i class="fa fa-sticky-note" aria-hidden="true"></i> Evt. noter</label>
+            <textarea ng-model="room.Booking.Customer.Notes"></textarea>
+          </md-input-container>
+
+          <md-input-container>
+            <label><i class="fa fa-envelope" aria-hidden="true"></i> Kundens Email</label>
+            <input ng-model="room.Booking.Customer.CustomerEmail" type="text">
+
+          </md-input-container>
+
+        </div>
+
+        <h1></h1>
+        <h3>Firma oplysninger</h3>
+        <h5></h5>
+        <div layout="column">
+          <md-input-container>
+            <label><i class="fa fa-building" aria-hidden="true"></i> Firma navn</label>
+            <input ng-model="room.Booking.Customer.Company.CompanyName" type="text">
+          </md-input-container>
+          <md-input-container>
+            <label> <i class="fa fa-phone" aria-hidden="true"></i> Firma telefon</label>
+            <input ng-model="room.Booking.Customer.Company.CompanyPhoneNumber " type="text">
+          </md-input-container>
+          <md-input-container>
+            <label> <i class="fa fa-envelope" aria-hidden="true"></i> Firma Email</label>
+            <input ng-model="room.Booking.Customer.Company.CompanyEmail" type="text">
+          </md-input-container>
+
+        </div>
+      </div>
+    </md-list-item>
+  </div>
+
+</md-content>

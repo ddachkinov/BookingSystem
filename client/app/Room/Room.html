@@ -1,26 +1,30 @@
-<div class = "BookedRooms">
-  <div ng-controller="RoomCtrl" ng-cloak>
-    <md-content>
+<md-content flex-offset="10" flex="100">
+  <div class="BookedRooms">
+    <div ng-controller="RoomCtrl" ng-cloak>
+
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
-            <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
+        <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
 
-              <div>Værelse Nr: {{room.RoomNumber}} </div>
+          <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
+    </div>
   </div>
-</div>
 
-<div class = "FreeRooms">
-  <div ng-controller="RoomCtrl" ng-cloak>
-    <md-content>
+
+  <div class="FreeRooms">
+    <div ng-controller="RoomCtrl" ng-cloak>
+
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over frie værelser</md-subheader>
-            <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
+        <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
 
-              <div>Værelse Nr: {{room.RoomNumber}} </div>
+          <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
+    </div>
   </div>
-</div>
+</md-content>
+
 
 
 <!-- <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>

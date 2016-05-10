@@ -10,7 +10,7 @@ angular.module('bookingSystemApp')
         console.log(room);
       });
 
-      $scope.goBack = function() {
+      $scope.goBack = function(){
         window.history.back();
       };
     });

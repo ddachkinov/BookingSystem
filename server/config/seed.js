@@ -188,7 +188,7 @@ Room.create({
   RoomNumber: 10,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -213,7 +213,7 @@ Room.create({
   RoomNumber: 11,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -238,7 +238,7 @@ Room.create({
   RoomNumber: 12,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -263,7 +263,7 @@ Room.create({
   RoomNumber: 13,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -288,7 +288,7 @@ Room.create({
   RoomNumber: 14,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -313,7 +313,7 @@ Room.create({
   RoomNumber: 15,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -338,7 +338,7 @@ Room.create({
   RoomNumber: 16,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
@@ -363,7 +363,7 @@ Room.create({
   RoomNumber: 17,
   Rented: false,
   Double: false,
-  BathRoom : false,
+  BathRoom : true,
   RoomPrice : 850,
   Booking:{
     ExtraBed: false,
