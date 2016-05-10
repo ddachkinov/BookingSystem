@@ -5,51 +5,19 @@
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
         <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
-
           <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
     </div>
   </div>
 
 
-  <div class="FreeRooms">
-    <div ng-controller="RoomCtrl" ng-cloak>
-
-      <md-list>
+  <div class="FreeRooms" >
+    <div ng-controller="RoomCtrl" ng-cloak >
+      <md-list >
         <md-subheader class="md-no-sticky">Oversigt over frie værelser</md-subheader>
         <md-list-item ng-click="goToBooking(room)" ng-repeat="room in Rooms">
-
           <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
     </div>
   </div>
 </md-content>
-
-
-
-<!-- <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-    <md-button class="md-raised">Button</md-button>
-    <md-button class="md-raised md-primary">Primary</md-button>
-    <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-    <md-button class="md-raised md-warn">Warn</md-button>
-    <div class="label">Raised</div>
-  </section> -->
-
-
-
-
-
-
-<!--Sådan det var til at starte med, vent med at slette til sidst!!!!!!!  -->
-<!-- <div>Oversigt over værelser</div>
-<div ng-repeat="isRoom in Rooms">
-<div>Room Number: {{isRoom.RoomNumber}} </div>
-<div>Rented: {{isRoom.Rented}}</div>
-
-<button ng-click="deleteRoom(isRoom)">Delete</button>
-
-
-<input ng-model="isRoom.RoomNumber">
-<button ng-click="UpdateRoomNumber(isRoom)">Update  </button>
-
-</div> -->

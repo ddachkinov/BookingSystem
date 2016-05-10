@@ -11,24 +11,31 @@
       <div flex-sm="100" flex-xs="100" class="md-list-item-text" layout="column">
         <h2>Værelse nr: {{room.RoomNumber}} </h2>
 
-        <div>
-          <md-switch ng-model="room.Rented" aria-label="Switch 2" ng-true-value="Udlejede" ng-false-value="Frit">
-            Udlejnings status: {{room.Rented}}
-          </md-switch>
-        </div>
-        <h4>Dobbelt værelse: {{ room.Double }}</h4>
-        <h4>Bad på værelset: {{ room.BathRoom }}</h4>
-        <h4>Værelses pris: {{ room.RoomPrice }}</h4>
-        <h1></h1>
+        <div layout="column">
+          <div>
+            <md-switch ng-model="room.Rented" aria-label="Switch 2"  ng-change="room.Rented" class="md-primary">
+              <h4>Udlejnings status </h4>
+            </md-switch>
+          </div>
+          <md-checkbox ng-model="room.Double" aria-label="Checkbox 1">
+            <h4> <i class="fa fa-bed" aria-hidden="true"></i> Dobbelt værelse</h4>
+          </md-checkbox>
+          <md-checkbox ng-model="room.BathRoom" aria-label="Checkbox 1">
+            <h4> <i class="fa fa-tint" aria-hidden="true"></i>  Bad på værelset</h4>
+          </md-checkbox>
 
+          <h4> <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Værelses pris: {{room.RoomPrice}}</h4>
+        </div>
+
+        <h1></h1>
         <h3>Booking Detaljer</h3>
         <h5></h5>
         <div layout="column">
           <md-checkbox ng-model="room.Booking.ExtraBed" aria-label="Checkbox 1">
-            <h4>Opredning: {{ room.Booking.ExtraBed }}</h4>
+            <h4><i class="fa fa-bed" aria-hidden="true"></i> Opredning</h4>
           </md-checkbox>
           <md-checkbox ng-model="room.Booking.Animal " aria-label="Checkbox 1">
-            <h4>Dyr: {{ room.Booking.Animal  }}</h4>
+            <h4><i class="fa fa-paw" aria-hidden="true"></i> Dyr</h4>
           </md-checkbox>
         </div>
         <h5></h5>
@@ -49,12 +56,11 @@
             <label> <i class="fa fa-phone" aria-hidden="true"></i> Kundens telefon nr. </label>
             <input ng-model="room.Booking.Customer.CustomerPhoneNumber" type="text">
           </md-input-container>
-          <div layout = "row">
-            <h4> Nøgle i nøglebox: </h4>
-          <md-checkbox  ng-model="room.Booking.Customer.Keybox" aria-label="Checkbox 1">
 
+          <md-checkbox ng-model="room.Booking.Customer.Keybox" aria-label="Checkbox 1">
+            <h4> <i class="fa fa-key" aria-hidden="true"></i>  Nøgle i nøglebox </h4>
           </md-checkbox>
-        </div>
+
           <md-input-container>
             <label><i class="fa fa-sticky-note" aria-hidden="true"></i> Evt. noter</label>
             <textarea ng-model="room.Booking.Customer.Notes"></textarea>
