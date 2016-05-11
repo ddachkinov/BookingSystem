@@ -1,4 +1,5 @@
 <md-content flex-offset="5" flex="90">
+
   <div flex-sm="100" flex-xs="100" layout="row">
     <div flex="5">
       <md-button class="md-fab md-mini md-primary" aria-label="Go Back" ng-click="goBack()">
@@ -13,8 +14,7 @@
 
         <div layout="column">
           <div>
-            <md-switch ng-model="room.Rented" aria-label="Switch 2"  ng-change="room.Rented" class="md-primary">
-              <h4>Udlejnings status </h4>
+            <md-switch ng-model="room.Rented" aria-label="Switch 2"  ng-change="room.Rented" class="md-primary"> {{room.Rented ? "Udlejet" : "Ledig"}}
             </md-switch>
           </div>
           <md-checkbox ng-model="room.Double" aria-label="Checkbox 1">
@@ -43,6 +43,7 @@
           <md-datepicker ng-model="room.Booking.ArrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
           <md-datepicker ng-model="room.Booking.DepatureDate" md-placeholder="Afrejse dato"></md-datepicker>
         </div>
+
 
         <h1></h1>
         <h3>Kunde Detaljer</h3>
@@ -95,5 +96,17 @@
       </div>
     </md-list-item>
   </div>
+
+
+  <md-button ng-click="updateBooking(room)" class="md-raised md-primary">
+    <i class="fa fa-floppy-o" aria-hidden="true"></i>
+     Gem ændringer
+  </md-button>
+  <md-button class="md-raised md-warn" ng-click= "deleteBooking(room, $event)">
+    <i class="fa fa-trash-o" aria-hidden="true"></i>
+    Slet Booking
+
+  </md-button>
+
 
 </md-content>

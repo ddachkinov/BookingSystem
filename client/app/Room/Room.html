@@ -1,4 +1,6 @@
 <md-content flex-offset="10" flex="100">
+  <div layout="row">
+    <div class="col-sm-2"></div>
   <div class="BookedRooms">
     <div ng-controller="RoomCtrl" ng-cloak>
 
@@ -10,7 +12,7 @@
     </div>
   </div>
 
-
+<div class="col-sm-2"></div>
   <div class="FreeRooms" >
     <div ng-controller="RoomCtrl" ng-cloak >
       <md-list >
@@ -19,5 +21,6 @@
           <div>Værelse Nr: {{room.RoomNumber}} </div>
           </md-button>
     </div>
+  </div>
   </div>
 </md-content>

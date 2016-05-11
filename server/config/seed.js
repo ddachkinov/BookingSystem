@@ -46,15 +46,15 @@ Room.find({}).removeAsync()
         ArrivalDate: new Date(),
         DepatureDate: new Date(),
         Customer: {
-          CustomerName: " ",
-          CustomerPhoneNumber: " ",
+          CustomerName: "",
+          CustomerPhoneNumber: "",
           Keybox: false,
-          Notes: " ",
-          CustomerEmail: " ",
+          Notes: "",
+          CustomerEmail: "",
           Company: {
-            CompanyName: " ",
-            CompanyPhoneNumber: " ",
-            CompanyEmail: " "
+            CompanyName: "",
+            CompanyPhoneNumber: "",
+            CompanyEmail: ""
           }
         }
       }
