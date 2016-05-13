@@ -10,38 +10,38 @@
 
     <md-list-item class="md-3-line">
       <div flex-sm="100" flex-xs="100" class="md-list-item-text" layout="column">
-        <h2>Værelse nr: {{room.RoomNumber}} </h2>
+        <h2>Værelse nr: {{room.roomNumber}} </h2>
 
         <div layout="column">
           <div>
-            <md-switch ng-model="room.Rented" aria-label="Switch 2"  ng-change="room.Rented" class="md-primary"> {{room.Rented ? "Udlejet" : "Ledig"}}
+            <md-switch ng-model="room.rented" aria-label="Switch 2" ng-change="room.Rented" class="md-primary"> {{room.Rented ? "Udlejet" : "Ledig"}}
             </md-switch>
           </div>
-          <md-checkbox ng-model="room.Double" aria-label="Checkbox 1">
-            <h4> <i class="fa fa-bed" aria-hidden="true"></i> Dobbelt værelse</h4>
-          </md-checkbox>
-          <md-checkbox ng-model="room.BathRoom" aria-label="Checkbox 1">
+
+          <md-checkbox ng-model="room.bathRoom" aria-label="Checkbox 1">
             <h4> <i class="fa fa-tint" aria-hidden="true"></i>  Bad på værelset</h4>
           </md-checkbox>
-
-          <h4> <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Værelses pris: {{room.RoomPrice}}</h4>
+          <h4> <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Værelses pris: {{room.roomPrice}}</h4>
         </div>
 
-        <h1></h1>
+        <br>
         <h3>Booking Detaljer</h3>
         <h5></h5>
-        <div layout="column">
-          <md-checkbox ng-model="room.Booking.ExtraBed" aria-label="Checkbox 1">
+        <div layout="column" ng-repeat="booking in room.bookings">
+          <md-checkbox ng-model="booking.double" aria-label="Checkbox 1">
+            <h4> <i class="fa fa-bed" aria-hidden="true"></i> Dobbelt værelse</h4>
+          </md-checkbox>
+          <md-checkbox ng-model="booking.extraBed" aria-label="Checkbox 1">
             <h4><i class="fa fa-bed" aria-hidden="true"></i> Opredning</h4>
           </md-checkbox>
-          <md-checkbox ng-model="room.Booking.Animal " aria-label="Checkbox 1">
+          <md-checkbox ng-model="booking.Animal " aria-label="Checkbox 1">
             <h4><i class="fa fa-paw" aria-hidden="true"></i> Dyr</h4>
           </md-checkbox>
-        </div>
-        <h5></h5>
-        <div>
-          <md-datepicker ng-model="room.Booking.ArrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
-          <md-datepicker ng-model="room.Booking.DepatureDate" md-placeholder="Afrejse dato"></md-datepicker>
+          <h5></h5>
+          <div>
+            <md-datepicker ng-model="booking.ArrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
+            <md-datepicker ng-model="booking.DepatureDate" md-placeholder="Afrejse dato"></md-datepicker>
+          </div>
         </div>
 
 
@@ -70,9 +70,7 @@
           <md-input-container>
             <label><i class="fa fa-envelope" aria-hidden="true"></i> Kundens Email</label>
             <input ng-model="room.Booking.Customer.CustomerEmail" type="text">
-
           </md-input-container>
-
         </div>
 
         <h1></h1>
@@ -99,12 +97,10 @@
 
 
   <md-button ng-click="updateBooking(room)" class="md-raised md-primary">
-    <i class="fa fa-floppy-o" aria-hidden="true"></i>
-     Gem ændringer
+    <i class="fa fa-floppy-o" aria-hidden="true"></i> Gem ændringer
   </md-button>
-  <md-button class="md-raised md-warn" ng-click= "deleteBooking(room, $event)">
-    <i class="fa fa-trash-o" aria-hidden="true"></i>
-    Slet Booking
+  <md-button class="md-raised md-warn" ng-click="deleteBooking(room, $event)">
+    <i class="fa fa-trash-o" aria-hidden="true"></i> Slet Booking
 
   </md-button>
 
