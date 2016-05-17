@@ -29,11 +29,11 @@ angular.module('bookingSystemApp')
         .ok('Slet Booking')
         .cancel('Nej, slet IKKE denne Booking');
       $mdDialog.show(confirm).then(function() {
-        _.remove($scope.room.Bookings, function(booking) {
+        _.remove($scope.bookings, function(booking) {
           return booking._id === $scope.updateBooking._id;
         });
         RoomService.update({
-          id: $scope.room._id
+          id: $scope.room.bookings._id
         }, $scope.room, function(room) {
           $scope.room = room;
           // var toast = $mdToast.simple()
