@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog) {
+  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast,) {
 
     RoomService.get({
       id: $stateParams.id
@@ -14,12 +14,11 @@ angular.module('bookingSystemApp')
       window.history.back();
     };
 
-    $scope.updateBooking = function(room) {
-      $scope.updateBooking = room;
+    $scope.updateBooking = function(booking) {
+      $scope.updatingBooking = booking;
     };
 
-
-    $scope.deleteBooking = function(room, event) {
+    $scope.deleteBooking = function(bookings, event){
       var confirm = $mdDialog.confirm()
         .title('Slet booking')
         .textContent('Er du sikker på at den valgte booking skal slettes?')
@@ -27,23 +26,25 @@ angular.module('bookingSystemApp')
         .targetEvent(event)
         .openFrom('#left')
         .ok('Slet Booking')
-        .cancel('Nej, slet IKKE denne Booking');
-      $mdDialog.show(confirm).then(function() {
-        _.remove($scope.bookings, function(booking) {
-          return booking._id === $scope.updateBooking._id;
-        });
-        RoomService.update({
-          id: $scope.room.bookings._id
-        }, $scope.room, function(room) {
-          $scope.room = room;
-          // var toast = $mdToast.simple()
-          //   .textContent('Weekplan Deleted')
-          //   .action('OK')
-          //   .highlightAction(false)
-          //   .position('top');
-          // $mdToast.show(toast);
-          //$scope.updateBooking = undefined;
-        });
+        .cancel('Nej, slet IKKE denne booking');
+        $mdDialog.show(confirm).then(function(){
+        _.remove($scope.room.bookings, function(bookings){
+       return bookings._id === $scope.updatingBooking._id;
       });
-    };
+
+      RoomService.update({
+        id: $scope.room._id
+      }, $scope.room, function(room){
+        $scope.room = room;
+        var toast = $mdToast.simple()
+            .textContent('Booking Deleted')
+            .action('OK')
+            .highlightAction(false)
+            .position('top');
+          $mdToast.show(toast);
+          $scope.updatingBooking = undefined;
+      });
+    });
+  };
+
   });
