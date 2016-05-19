@@ -20,7 +20,7 @@ Room.find({}).removeAsync()
         double: true,
         extraBed: false,
         animal: true,
-        arrivalDate: new Date("2016-06-20"),
+        arrivalDate: new Date("2016-05-20"),
         depatureDate: new Date("2016-06-22"),
         customer: {
           customerName: "Frede",
