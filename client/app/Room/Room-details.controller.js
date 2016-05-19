@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast,) {
+  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast, ) {
 
     RoomService.get({
       id: $stateParams.id
@@ -14,11 +14,11 @@ angular.module('bookingSystemApp')
       window.history.back();
     };
 
-    $scope.updateBooking = function(booking) {
+    $scope.editBooking = function(booking) {
       $scope.updatingBooking = booking;
     };
 
-    $scope.deleteBooking = function(bookings, event){
+    $scope.deleteBooking = function(booking, event) {
       var confirm = $mdDialog.confirm()
         .title('Slet booking')
         .textContent('Er du sikker på at den valgte booking skal slettes?')
@@ -27,24 +27,45 @@ angular.module('bookingSystemApp')
         .openFrom('#left')
         .ok('Slet Booking')
         .cancel('Nej, slet IKKE denne booking');
-        $mdDialog.show(confirm).then(function(){
-        _.remove($scope.room.bookings, function(bookings){
-       return bookings._id === $scope.updatingBooking._id;
-      });
+      $mdDialog.show(confirm).then(function() {
+        _.remove($scope.room.bookings, function(bookingFromArray) {
+          return booking._id === bookingFromArray._id;
+        });
 
-      RoomService.update({
-        id: $scope.room._id
-      }, $scope.room, function(room){
-        $scope.room = room;
-        var toast = $mdToast.simple()
+        RoomService.update({
+          id: $scope.room._id
+        }, $scope.room, function(room) {
+          $scope.room = room;
+          var toast = $mdToast.simple()
             .textContent('Booking Deleted')
             .action('OK')
             .highlightAction(false)
-            .position('top');
+            .position('buttom');
           $mdToast.show(toast);
+          room.rented == false;
           $scope.updatingBooking = undefined;
+        });
       });
-    });
-  };
+    };
+
+    $scope.updateBooking = function() {
+      RoomService.update({
+      id: $scope.room._id
+    }, $scope.room, function(room) {
+      $scope.room = room;
+        });
+      };
+
+    //     $scope.updateBooking = function(){
+    //         _.update($scope.room.bookings, function(bookingFromArray) {
+    //       return bookingFromArray._id === $scope.updatingBooking._id;
+    // });
+    //     RoomService.update({
+    //       id: $scope.room._id
+    //     }, $scope.room, function(room) {
+    //       $scope.room = room;
+    //     });
+    //   };
+
 
   });

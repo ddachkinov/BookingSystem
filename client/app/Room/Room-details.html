@@ -36,7 +36,7 @@
           <md-checkbox ng-model="booking.extraBed" aria-label="Checkbox 1">
             <h4><i class="fa fa-bed" aria-hidden="true"></i> Opredning</h4>
           </md-checkbox>
-          <md-checkbox ng-model="booking.Animal " aria-label="Checkbox 1">
+          <md-checkbox ng-model="booking.animal " aria-label="Checkbox 1">
             <h4><i class="fa fa-paw" aria-hidden="true"></i> Dyr</h4>
           </md-checkbox>
           <h5></h5>
@@ -88,6 +88,13 @@
             </md-input-container>
 
           </div>
+
+          <md-button ng-click="updateBooking(booking, $event)" class="md-raised md-primary">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Gem ændringer
+          </md-button>
+          <md-button class="md-raised md-warn" ng-click="deleteBooking(booking, $event)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i> Slet Booking
+          </md-button>
         </div>
 
         <!--Empty bookings  -->
@@ -138,33 +145,27 @@
           <label>
             <br />Firma oplysninger</label>
 
-            <div layout="column">
-              <md-input-container>
-                <label><i class="fa fa-building" aria-hidden="true"></i> Firma navn</label>
-                <input ng-model="booking.customer.company.companyName" type="text">
-              </md-input-container>
-              <md-input-container>
-                <label> <i class="fa fa-phone" aria-hidden="true"></i> Firma telefon</label>
-                <input ng-model="booking.customer.company.companyPhoneNumber " type="text">
-              </md-input-container>
-              <md-input-container>
-                <label> <i class="fa fa-envelope" aria-hidden="true"></i> Firma Email</label>
-                <input ng-model="booking.customer.company.companyEmail" type="text">
-              </md-input-container>
+          <div layout="column">
+            <md-input-container>
+              <label><i class="fa fa-building" aria-hidden="true"></i> Firma navn</label>
+              <input ng-model="booking.customer.company.companyName" type="text">
+            </md-input-container>
+            <md-input-container>
+              <label> <i class="fa fa-phone" aria-hidden="true"></i> Firma telefon</label>
+              <input ng-model="booking.customer.company.companyPhoneNumber " type="text">
+            </md-input-container>
+            <md-input-container>
+              <label> <i class="fa fa-envelope" aria-hidden="true"></i> Firma Email</label>
+              <input ng-model="booking.customer.company.companyEmail" type="text">
+            </md-input-container>
 
-            </div>
+          </div>
+          <md-button ng-click="updateBooking()" class="md-raised md-primary">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i> Opret Booking
+          </md-button>
         </div>
     </md-list-item>
     </div>
   </div>
-
-
-  <md-button ng-click="updateBooking(room)" class="md-raised md-primary">
-    <i class="fa fa-floppy-o" aria-hidden="true"></i> Gem ændringer
-  </md-button>
-  <md-button class="md-raised md-warn" ng-click="deleteBooking(room, $event)">
-    <i class="fa fa-trash-o" aria-hidden="true"></i> Slet Booking
-  </md-button>
-
 
 </md-content>
