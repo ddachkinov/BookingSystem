@@ -16,31 +16,12 @@ Room.find({}).removeAsync()
       bathRoom: false,
       roomPrice: 650,
       bookings: [
-      //   {
-      //   double: true,
-      //   extraBed: false,
-      //   animal: true,
-      //   arrivalDate: new Date(),
-      //   depatureDate: new Date(),
-      //   customer: {
-      //     customerName: "Frede",
-      //     customerPhoneNumber: "88888888",
-      //     keybox: false,
-      //     notes: " Lalalalalalalala",
-      //     customerEmail: "frede@frede.dk",
-      //     company: {
-      //       companyName: " Frede A/S",
-      //       companyPhoneNumber: "77777777",
-      //       companyEmail: "FredeFrede@Frede.dk"
-      //     }
-      //   }
-      // },
       {
         double: true,
         extraBed: false,
         animal: true,
-        arrivalDate: new Date(),
-        depatureDate: new Date(),
+        arrivalDate: new Date("2016-06-20"),
+        depatureDate: new Date("2016-06-22"),
         customer: {
           customerName: "Frede",
           customerPhoneNumber: "88888888",

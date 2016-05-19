@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast, ) {
+  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast) {
 
     RoomService.get({
       id: $stateParams.id
     }, function(room) {
       $scope.room = room;
+      _(room.bookings).forEach(a => a.arrivalDate = new Date(a.arrivalDate));
+      _(room.bookings).forEach(d => d.depatureDate = new Date(d.depatureDate));
       console.log(room);
     });
 
