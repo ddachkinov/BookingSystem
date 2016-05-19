@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast) {
+  .controller('RoomDetailsCtrl', function($scope, $state, RoomService, $stateParams, $mdDialog, $mdToast ) {
 
     RoomService.get({
       id: $stateParams.id
@@ -52,22 +52,11 @@ angular.module('bookingSystemApp')
 
     $scope.updateBooking = function() {
       RoomService.update({
-      id: $scope.room._id
-    }, $scope.room, function(room) {
-      $scope.room = room;
-        });
-      };
-
-    //     $scope.updateBooking = function(){
-    //         _.update($scope.room.bookings, function(bookingFromArray) {
-    //       return bookingFromArray._id === $scope.updatingBooking._id;
-    // });
-    //     RoomService.update({
-    //       id: $scope.room._id
-    //     }, $scope.room, function(room) {
-    //       $scope.room = room;
-    //     });
-    //   };
+        id: $scope.room._id
+      }, $scope.room, function(room) {
+        $scope.room = room;
+      });
+    };
 
 
   });
