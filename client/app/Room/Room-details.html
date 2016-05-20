@@ -25,6 +25,7 @@
         </div>
 
 
+
         <label>
           <br />Booking Detaljer</label>
 
@@ -99,20 +100,21 @@
 
         <!--Empty bookings  -->
         <!-- Hvis der ikke er nogen booking, vises checkboxes og det hele, og der bliver brugt scope til at oprette en ny, hvis der bliver gemt noget -->
+        <form name="newBookingForm">
         <div ng-if="!room.bookings  || room.bookings.length < 1" layout="column">
-          <md-checkbox ng-model="booking.double" aria-label="Checkbox 1">
+          <md-checkbox ng-model="newBooking.double" aria-label="Checkbox 1">
             <h4> <i class="fa fa-bed" ></i> Dobbelt værelse</h4>
           </md-checkbox>
-          <md-checkbox ng-model="booking.extraBed" aria-label="Checkbox 1">
+          <md-checkbox ng-model="newBooking.extraBed" aria-label="Checkbox 1">
             <h4><i class="fa fa-bed" aria-hidden="true"></i> Opredning</h4>
           </md-checkbox>
-          <md-checkbox ng-model="booking.animal " aria-label="Checkbox 1">
+          <md-checkbox ng-model="newBooking.animal " aria-label="Checkbox 1">
             <h4><i class="fa fa-paw" aria-hidden="true"></i> Dyr</h4>
           </md-checkbox>
           <h5></h5>
           <div>
-            <md-datepicker ng-model="booking.arrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
-            <md-datepicker ng-model="booking.depatureDate" md-placeholder="Afrejse dato"></md-datepicker>
+            <md-datepicker ng-model="newBooking.arrivalDate" md-placeholder="Ankomst dato"></md-datepicker>
+            <md-datepicker ng-model="newBooking.depatureDate" md-placeholder="Afrejse dato"></md-datepicker>
           </div>
 
           <label>
@@ -121,22 +123,22 @@
           <div layout="column">
             <md-input-container>
               <label> <i class="fa fa-user" aria-hidden="true"></i> Kundens navn</label>
-              <input ng-model="booking.customer.customerName" type="text">
+              <input ng-model="newBooking.customer.customerName" type="text">
             </md-input-container>
             <md-input-container>
               <label> <i class="fa fa-phone" aria-hidden="true"></i> Kundens telefon nr. </label>
-              <input ng-model="booking.customer.customerPhoneNumber" type="text">
+              <input ng-model="newBooking.customer.customerPhoneNumber" type="text">
             </md-input-container>
-            <md-checkbox ng-model="booking.customer.keybox" aria-label="Checkbox 1">
+            <md-checkbox ng-model="newBooking.customer.keybox" aria-label="Checkbox 1">
               <h4> <i class="fa fa-key" aria-hidden="true"></i>  Nøgle i nøglebox </h4>
             </md-checkbox>
             <md-input-container>
               <label><i class="fa fa-sticky-note" aria-hidden="true"></i> Evt. noter</label>
-              <textarea ng-model="booking.customer.notes"></textarea>
+              <textarea ng-model="newBooking.customer.notes"></textarea>
             </md-input-container>
             <md-input-container>
               <label><i class="fa fa-envelope" aria-hidden="true"></i> Kundens Email</label>
-              <input ng-model="booking.customer.customerEmail" type="text">
+              <input ng-model="newBooking.customer.customerEmail" type="text">
             </md-input-container>
           </div>
 
@@ -148,22 +150,23 @@
           <div layout="column">
             <md-input-container>
               <label><i class="fa fa-building" aria-hidden="true"></i> Firma navn</label>
-              <input ng-model="booking.customer.company.companyName" type="text">
+              <input ng-model="newBooking.customer.company.companyName" type="text">
             </md-input-container>
             <md-input-container>
               <label> <i class="fa fa-phone" aria-hidden="true"></i> Firma telefon</label>
-              <input ng-model="booking.customer.company.companyPhoneNumber " type="text">
+              <input ng-model="newBooking.customer.company.companyPhoneNumber " type="text">
             </md-input-container>
             <md-input-container>
               <label> <i class="fa fa-envelope" aria-hidden="true"></i> Firma Email</label>
-              <input ng-model="booking.customer.company.companyEmail" type="text">
+              <input ng-model="newBooking.customer.company.companyEmail" type="text">
             </md-input-container>
 
           </div>
-          <md-button ng-click="updateBooking()" class="md-raised md-primary">
+          <md-button ng-click="addBooking(newBookingForm)" class="md-raised md-primary">
             <i class="fa fa-floppy-o" aria-hidden="true"></i> Opret Booking
           </md-button>
         </div>
+      </form>
     </md-list-item>
     </div>
   </div>

@@ -6,7 +6,7 @@
 
       <md-list>
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
-        <md-list-item ng-if="room.rented == true" ng-click="goToBooking(room)" ng-repeat="room in Rooms">
+        <md-list-item ng-if="room.rented == true" ng-click="goToBooking(room)" ng-repeat="room in Rooms | orderBy : '+ roomNumber'">
           <div>Værelse Nr: {{room.roomNumber}} </div>
           </md-button>
     </div>
@@ -17,7 +17,7 @@
     <div ng-controller="RoomCtrl" ng-cloak >
       <md-list >
         <md-subheader class="md-no-sticky">Oversigt over frie værelser</md-subheader>
-        <md-list-item ng-if="room.rented == false" ng-click="goToBooking(room)" ng-repeat="room in Rooms">
+        <md-list-item ng-if="room.rented == false" ng-click="goToBooking(room)" ng-repeat="room in Rooms | orderBy : '+ roomNumber'">
           <div>Værelse Nr: {{room.roomNumber}} </div>
           </md-button>
     </div>

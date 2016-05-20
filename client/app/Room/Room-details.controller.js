@@ -33,7 +33,7 @@ angular.module('bookingSystemApp')
         _.remove($scope.room.bookings, function(bookingFromArray) {
           return booking._id === bookingFromArray._id;
         });
-
+        $scope.room.rented = false;
         RoomService.update({
           id: $scope.room._id
         }, $scope.room, function(room) {
@@ -56,6 +56,20 @@ angular.module('bookingSystemApp')
       }, $scope.room, function(room) {
         $scope.room = room;
       });
+    };
+
+    $scope.newBooking = {};
+
+    $scope.addBooking = function(form){
+      if (form.$valid) {
+        $scope.room.bookings.push($scope.newBooking);
+        $scope.room.rented = true;
+        RoomService.update({
+          id: $scope.room._id
+        }, $scope.room, function(room) {
+          $scope.room = room;
+        });
+        }
     };
 
 
