@@ -1,3 +1,11 @@
 .md-toolbar-tools{
   background-color: #E20E0E;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar-text{
+  color: white;
+  font-size: 18px;
+  font-style: italic;
 }
