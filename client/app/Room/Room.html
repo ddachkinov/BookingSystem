@@ -1,4 +1,4 @@
-<md-content flex-offset="10" flex="100">
+<md-content flex-offset="10" flex="100"  ng-if="isAuthenticated()">
   <div layout="row">
     <div class="col-sm-2"></div>
   <div class="BookedRooms">
@@ -8,7 +8,7 @@
         <md-subheader class="md-no-sticky">Oversigt over udlejede værelser</md-subheader>
         <md-list-item ng-if="room.rented == true" ng-click="goToBooking(room)" ng-repeat="room in Rooms | orderBy : '+ roomNumber'">
           <div>Værelse Nr: {{room.roomNumber}} </div>
-          </md-button>
+
     </div>
   </div>
 
@@ -19,8 +19,11 @@
         <md-subheader class="md-no-sticky">Oversigt over frie værelser</md-subheader>
         <md-list-item ng-if="room.rented == false" ng-click="goToBooking(room)" ng-repeat="room in Rooms | orderBy : '+ roomNumber'">
           <div>Værelse Nr: {{room.roomNumber}} </div>
-          </md-button>
+
     </div>
   </div>
   </div>
 </md-content>
+<div ng-if="!isAuthenticated()">
+  <h3>Login to see anything</h3>
+</div>

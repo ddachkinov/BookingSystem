@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('bookingSystemApp')
-  .controller('RoomCtrl', function($scope, $state, RoomService) {
-    $scope.message = 'Hello12';
+  .controller('RoomCtrl', function($scope, $state, RoomService, Auth) {
+    $scope.isAuthenticated = Auth.isLoggedIn;
+    
 
     RoomService.query(function(RoomQuery) {
       $scope.Rooms = RoomQuery;
